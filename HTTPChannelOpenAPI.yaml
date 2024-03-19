@@ -1,0 +1,279 @@
+openapi: "3.1.0"
+info:
+  title: "HTTPChannel"
+  version: "0"
+  contact:
+    name: "HTTPChannel"
+servers:
+- url: "http://localhost:8110"
+  x-sharedResourceName: "/SharedResources/HTTPConnection.sharedhttp"
+tags:
+- name: "/Channels/HTTP"
+paths:
+  /Channels/HTTP/PostEmpl:
+    x-channel-name: "HTTP"
+    get:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/PostEmpl"
+      operationId: "Channels_HTTP_PostEmpl_get"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      - name: "EmployeeName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "CompanyName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Address"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "City"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "State"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Zip"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    post:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/PostEmpl"
+      operationId: "Channels_HTTP_PostEmpl_post"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      - name: "EmployeeName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "CompanyName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Address"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "City"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "State"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Zip"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    put:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/PostEmpl"
+      operationId: "Channels_HTTP_PostEmpl_put"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      - name: "EmployeeName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "CompanyName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Address"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "City"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "State"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Zip"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    delete:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/PostEmpl"
+      operationId: "Channels_HTTP_PostEmpl_delete"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      - name: "EmployeeName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "CompanyName"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Address"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "City"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "State"
+        in: "query"
+        required: false
+        schema:
+          type: "string"
+      - name: "Zip"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+  /Channels/HTTP/GetEmplInfo:
+    x-channel-name: "HTTP"
+    get:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/GetEmplInfo"
+      operationId: "Channels_HTTP_GetEmplInfo_get"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    post:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/GetEmplInfo"
+      operationId: "Channels_HTTP_GetEmplInfo_post"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    put:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/GetEmplInfo"
+      operationId: "Channels_HTTP_GetEmplInfo_put"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+    delete:
+      tags:
+      - "/Channels/HTTP"
+      x-default-event: "/Events/GetEmplInfo"
+      operationId: "Channels_HTTP_GetEmplInfo_delete"
+      parameters:
+      - name: "EmplID"
+        in: "query"
+        required: false
+        schema:
+          type: "integer"
+      responses:
+        default:
+          description: "Success Response"
+components:
+  schemas:
+    PostEmpl:
+      type: "object"
+      xml:
+        name: "event"
+      properties:
+        EmplID:
+          type: "integer"
+          format: "int32"
+        EmployeeName:
+          type: "string"
+        CompanyName:
+          type: "string"
+        Address:
+          type: "string"
+        City:
+          type: "string"
+        State:
+          type: "string"
+        Zip:
+          type: "integer"
+          format: "int32"
+    GetEmplInfo:
+      type: "object"
+      xml:
+        name: "event"
+      properties:
+        EmplID:
+          type: "integer"
+          format: "int32"
