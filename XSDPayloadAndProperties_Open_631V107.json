@@ -1,0 +1,697 @@
+{
+  "openapi" : "3.1.0",
+  "info" : {
+    "title" : "XSDPayloadAndProperties",
+    "version" : "0",
+    "contact" : {
+      "name" : "XSDPayloadAndProperties"
+    }
+  },
+  "servers" : [ {
+    "url" : "http://localhost:7070",
+    "x-sharedResourceName" : "/SharedResources/HTTPCon.sharedhttp"
+  } ],
+  "tags" : [ {
+    "name" : "/Channels/HTTP"
+  } ],
+  "paths" : {
+    "/Channels/HTTP/testJson" : {
+      "x-channel-name" : "HTTP",
+      "post" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "x-default-event" : "/Events/SendStudentDataJson",
+        "operationId" : "Channels_HTTP_testJson_post",
+        "parameters" : [ {
+          "name" : "Age",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "Standard",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Percentage",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "number"
+          }
+        }, {
+          "name" : "AdmissionDate",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "EligibleForScholorship",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "boolean"
+          }
+        }, {
+          "name" : "SSN",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element_xml",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            },
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseJson",
+                  "x-eventPath" : "/Events/StudentResponseJson"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseJson",
+                  "x-eventPath" : "/Events/StudentResponseJson"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "x-default-event" : "/Events/SendStudentDataJson",
+        "operationId" : "Channels_HTTP_testJson_put",
+        "parameters" : [ {
+          "name" : "Age",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "Standard",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Percentage",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "number"
+          }
+        }, {
+          "name" : "AdmissionDate",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "EligibleForScholorship",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "boolean"
+          }
+        }, {
+          "name" : "SSN",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element_xml",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            },
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseJson",
+                  "x-eventPath" : "/Events/StudentResponseJson"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseJson",
+                  "x-eventPath" : "/Events/StudentResponseJson"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Channels/HTTP/testXml" : {
+      "x-channel-name" : "HTTP",
+      "post" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "x-default-event" : "/Events/SendStudentDataXml",
+        "operationId" : "Channels_HTTP_testXml_post",
+        "parameters" : [ {
+          "name" : "Age",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "Standard",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Percentage",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "number"
+          }
+        }, {
+          "name" : "AdmissionDate",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "EligibleForScholorship",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "boolean"
+          }
+        }, {
+          "name" : "SSN",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element_xml",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            },
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseXml",
+                  "x-eventPath" : "/Events/StudentResponseXml"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseXml",
+                  "x-eventPath" : "/Events/StudentResponseXml"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "x-default-event" : "/Events/SendStudentDataXml",
+        "operationId" : "Channels_HTTP_testXml_put",
+        "parameters" : [ {
+          "name" : "Age",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "Standard",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Percentage",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "number"
+          }
+        }, {
+          "name" : "AdmissionDate",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "EligibleForScholorship",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "boolean"
+          }
+        }, {
+          "name" : "SSN",
+          "in" : "query",
+          "required" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element_xml",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            },
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseXml",
+                  "x-eventPath" : "/Events/StudentResponseXml"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StudentResponseXml",
+                  "x-eventPath" : "/Events/StudentResponseXml"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Student_Request_Element" : {
+        "type" : "object",
+        "xml" : {
+          "namespace" : "http://tibco.com/qa/xsd/student"
+        },
+        "properties" : {
+          "Name" : {
+            "type" : "string"
+          },
+          "Roll_no" : {
+            "type" : "integer"
+          },
+          "Marks" : {
+            "type" : "number"
+          },
+          "IsTopper" : {
+            "type" : "boolean"
+          },
+          "RegistrationNo" : {
+            "type" : "integer"
+          },
+          "Subjects" : {
+            "type" : "string"
+          },
+          "DOB" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Student_Request_Element_xml" : {
+        "type" : "object",
+        "xml" : {
+          "namespace" : "http://tibco.com/qa/xsd/student"
+        },
+        "properties" : {
+          "Name" : {
+            "type" : "string"
+          },
+          "Roll_no" : {
+            "type" : "integer"
+          },
+          "Marks" : {
+            "type" : "number"
+          },
+          "IsTopper" : {
+            "type" : "boolean"
+          },
+          "RegistrationNo" : {
+            "type" : "integer"
+          },
+          "Subjects" : {
+            "type" : "string"
+          },
+          "DOB" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "SendStudentDataJson" : {
+        "type" : "object",
+        "xml" : {
+          "name" : "event"
+        },
+        "properties" : {
+          "Age" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "Standard" : {
+            "type" : "string"
+          },
+          "Percentage" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "AdmissionDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "EligibleForScholorship" : {
+            "type" : "boolean"
+          },
+          "SSN" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "payload" : {
+            "properties" : {
+              "Student_Request_Element" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        }
+      },
+      "Student_Response_Element" : {
+        "type" : "object",
+        "xml" : {
+          "namespace" : "http://tibco.com/qa/xsd/student"
+        },
+        "properties" : {
+          "Name" : {
+            "type" : "string"
+          },
+          "Roll_no" : {
+            "type" : "integer"
+          },
+          "Marks" : {
+            "type" : "number"
+          },
+          "IsTopper" : {
+            "type" : "boolean"
+          },
+          "RegistrationNo" : {
+            "type" : "integer"
+          },
+          "Subjects" : {
+            "type" : "string"
+          },
+          "DOB" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Student_Response_Element_xml" : {
+        "type" : "object",
+        "xml" : {
+          "namespace" : "http://tibco.com/qa/xsd/student"
+        },
+        "properties" : {
+          "Name" : {
+            "type" : "string"
+          },
+          "Roll_no" : {
+            "type" : "integer"
+          },
+          "Marks" : {
+            "type" : "number"
+          },
+          "IsTopper" : {
+            "type" : "boolean"
+          },
+          "RegistrationNo" : {
+            "type" : "integer"
+          },
+          "Subjects" : {
+            "type" : "string"
+          },
+          "DOB" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "StudentResponseJson" : {
+        "type" : "object",
+        "xml" : {
+          "name" : "event"
+        },
+        "properties" : {
+          "Age" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "Standard" : {
+            "type" : "string"
+          },
+          "Percentage" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "AdmissionDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "EligibleForScholorship" : {
+            "type" : "boolean"
+          },
+          "SSN" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "payload" : {
+            "properties" : {
+              "Student_Response_Element" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Response_Element",
+                "x-conceptPath" : "Student_Response_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        }
+      },
+      "SendStudentDataXml" : {
+        "type" : "object",
+        "xml" : {
+          "name" : "event"
+        },
+        "properties" : {
+          "Age" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "Standard" : {
+            "type" : "string"
+          },
+          "Percentage" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "AdmissionDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "EligibleForScholorship" : {
+            "type" : "boolean"
+          },
+          "SSN" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "payload" : {
+            "properties" : {
+              "Student_Request_Element_xml" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Request_Element_xml",
+                "x-conceptPath" : "Student_Request_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        }
+      },
+      "StudentResponseXml" : {
+        "type" : "object",
+        "xml" : {
+          "name" : "event"
+        },
+        "properties" : {
+          "Age" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "Standard" : {
+            "type" : "string"
+          },
+          "Percentage" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "AdmissionDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "EligibleForScholorship" : {
+            "type" : "boolean"
+          },
+          "SSN" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "payload" : {
+            "properties" : {
+              "Student_Response_Element_xml" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/Student_Response_Element_xml",
+                "x-conceptPath" : "Student_Response_Element",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "XSD_ELEMENT_REF",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/student"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
